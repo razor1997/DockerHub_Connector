@@ -1,9 +1,11 @@
+package com.mycompany.pwcho;
+
 import java.sql.*;
 
 public class DBHelper {
     // database URL
 
-    static final String DATABASE_URL = "jdbc:mysql://172.16.238.22:3306/KamilB";
+    static final String DATABASE_URL = "jdbc:mysql://10.0.10.3:3306/BKonrad";
     Connection connection = null;
     Statement statement = null;
     ResultSet resultSet = null;
@@ -11,7 +13,7 @@ public class DBHelper {
     public DBHelper() throws SQLException {
         // establish connection to database
         try {
-            connection = DriverManager.getConnection(DATABASE_URL, "KBiernacki", "KBiernacki");
+            connection = DriverManager.getConnection(DATABASE_URL, "KBielak", "KBielak");
 
         } catch (SQLException ex) {
             //XXX LOG
